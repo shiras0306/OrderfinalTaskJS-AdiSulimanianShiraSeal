@@ -1,0 +1,645 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Rubik+Doodle+Shadow&display=swap');
+
+h1, h2, .sitemap-tree > li > a, .sitemap-tree > li > a strong, .branch-card h3 {
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+}
+
+body {
+    direction: rtl;
+    font-family: Arial, sans-serif;
+    background-color: #fcf8f5;
+    color: #333333;
+    margin: 0 auto;
+    padding: 0;
+    width: 1280px;
+}
+
+
+
+header {
+    background-color: #F8CFD7;
+    padding: 15px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    right: 20px;
+    top: 15px; 
+}
+header h1 {
+    font-size: 2.6vw;
+    margin: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+    font-size: 1vw;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 12px 28px;
+    background-color: #9D5068;
+    color:#ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(236,232,232,0.78);
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li a {
+    display: block;
+    background-color: white;
+    color: #333333;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.notActive {
+    cursor: not-allowed;
+    color: gray;
+}
+
+nav ul > li > a.notActive {
+    color: #ffffff;
+}
+
+nav ul li ul a.notActive {
+    color: #333333;
+}
+
+.breadcrumbs {
+    list-style: none;
+    margin: 10px  20px ;
+}
+
+.breadcrumbs li {
+    display: inline-block;
+    font-size: 1.3vw;
+    color: #666666;
+}
+
+.breadcrumbs li:after {
+    content: " > ";
+    padding: 4px;
+    color: #999999;
+}
+
+.breadcrumbs li:last-child:after {
+    content: "";
+}
+
+.breadcrumbs a {
+    color: #bd315c;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+#hero {
+    margin: 20px ;
+    text-align: center;
+}
+
+#hero-image {
+    width: 100%;
+    max-width: 900px;
+    height:auto ;
+}
+
+#about {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 20px ;
+}
+
+
+#about p {
+    font-size: 1.5vw;
+     margin-bottom: 20px; 
+     line-height: 1.5;    
+    }
+
+#opening-hours {
+    text-align: center;
+    margin: 35px ;
+}
+
+
+.hours-table {
+    margin: auto;
+    background-color: #ffffff;
+    width: 50%;
+
+}
+
+.hours-table th {
+    background-color: #9D5068;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 1.7vw;
+    text-align: center;
+    width: 50%;
+
+}
+
+.hours-table td {
+    padding: 10px;
+    font-size: 1.5vw;
+    color: #444444;
+    text-align: center;
+    width: 50%;
+    border:1px solid #e6e6e6;
+}
+
+.centerBranches-table {
+    margin: auto;
+    background-color: #ffffff;
+    width: 50%;
+
+}
+
+.centerBranches-table th {
+    background-color: #9D5068;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 1.7vw;
+    text-align: center;
+    width: 20%;
+
+}
+
+.centerBranches-table td {
+    padding: 10px;
+    border:1px solid #e6e6e6;
+    font-size: 1.5vw;
+    color: #444444;
+    text-align: center;
+    width: 20%;
+
+}
+
+
+#bestsellers {
+    text-align: center;
+}
+
+.flavor-card {
+    display: inline-block;
+    width: 25%;
+    margin: 1%;
+    vertical-align: top;
+    text-align: center;
+}
+
+.flavor-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.flavor-card h3,
+.flavor-card p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.flavor-card h3 {
+    font-size: 1.8vw;
+}
+
+.flavor-card p {
+    font-size: 1.1vw;
+}
+
+
+
+.branches-container {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.branch-card {
+    display: inline-block;
+    width: 170px;
+    height: 100px;
+    margin: 35px;
+    vertical-align: top;
+    background-color: #d86b88;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: width 2s, height 4s, background-color 0.3s ease;
+}
+
+.branch-card:hover {
+    background-color: #ea89a8;
+}
+
+.branch-card h3 {
+    margin:1px 6px ;
+    font-size: 2vw;
+
+}
+
+.branch-card p {
+    line-height: 1.2;
+    font-size: 1.5vw;
+}
+
+
+#contact-section {
+    width: 1060px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+
+
+#contact-section p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+#contactForm fieldset {
+    border: 2px solid #f2c2cf;
+    padding: 18px;
+    margin-bottom: 20px;
+    background-color: #fffcfd;
+}
+
+#contactForm legend {
+    font-weight: bold;
+    color: #bd315c;
+    padding: 1px 10px;
+    font-size: 0.8vw;
+}
+
+#contactForm label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+#contactForm .input-field,
+#contactForm select,
+#contactForm textarea {
+    width: 97%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 0.7vw;
+    transition: border-color 0.3s ease;
+}
+
+
+.required-star {
+    color: #e60000;
+    font-weight: bold;
+}
+
+.radio-title,
+.checkbox-title {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.radio-group,
+.checkbox-group {
+    margin-top: 8px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: inline-block;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.submit-area {
+    text-align: center;
+    margin-top: 25px;
+}
+
+#sendBtn {
+    background-color: #bd315c;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    font-size: 0.9vw;
+    font-weight: bold;
+    cursor: pointer;
+    transition: width 2s, height 4s, background-color 3s;
+}
+
+#sendBtn:hover {
+    background-color: #d86b88;
+}
+
+main article {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+main article section {
+    margin-bottom: 25px;
+}
+
+
+main article ul {
+    padding-right: 20px;
+    line-height: 1.6;
+}
+
+main article ul li {
+    margin-bottom: 8px;
+}
+
+main article ul a {
+    color: #bd315c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main article ul a:hover {
+    text-decoration: underline;
+}
+
+.hit-credits {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+}
+
+.hit-credits img {
+    margin-top: 30px;
+    max-width: 120px;
+    height: auto;
+}
+
+#sitemap-tree-section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 20px 1px;
+}
+
+
+.sitemap-tree {
+    list-style-type: square;
+    padding-right: 25px;
+    line-height: 1.8;
+}
+
+.sitemap-tree li {
+    margin-bottom: 12px;
+    font-size: 0.9vw;
+}
+
+.sitemap-tree ul {
+    list-style-type: circle;
+    padding-right: 25px;
+    margin-top: 6px;
+}
+
+.sitemap-tree ul li {
+    font-size: 0.8vw;
+    color: #555555;
+    margin-bottom: 6px;
+}
+
+.sitemap-tree a {
+    text-decoration: none;
+}
+
+.sitemap-tree a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #9D5068;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 1.5vw;
+}
+
+main p {
+    font-size: 1.3vw;
+}
+
+
+
+main ul li,
+main ul li a {
+    font-size: 1.3vw;
+}
+
+
+h2 {
+    font-size: 1.7vw;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+.sitemap-tree > li > a,
+.sitemap-tree > li > a strong {
+    font-size: 1.2vw;
+}
+
+nav ul li, #about p, .hours-table th, .hours-table td, .centerBranches-table th, .centerBranches-table td, .flavor-card h3, .flavor-card p, .branch-card p,
+main article, footer p, main p, main p strong, main ul li, main ul li a, #orderForm legend 
+{
+    font-family: "Amatic SC", sans-serif;
+}
+
+h1, h2, h3, main ul li a, main p strong, nav ul li a:hover
+{
+    color: #9D5068;
+}
+
+main article h3 {
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+    font-size: 1.3vw;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+#container{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* עיצוב כללי לטופס ההזמנות */
+/* עיצוב כללי לטופס */
+#orderForm {
+    width: 700px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fffdf9;
+    border: 2px solid #e0c2b3;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+.formColumn {
+    width: 31%; /* רוחב לכל עמודה כדי ששלושתן ייכנסו בשורה אחת */
+    box-sizing: border-box;
+}
+
+.rightColumn {
+    float: right;
+}
+
+.midColumn {
+    float: right;
+    margin-right: 3.5%; /* רווח ביניים בין הטור הימני לאמצעי */
+}
+
+.leftColumn {
+    float: left;
+}
+
+/* עיצוב התיבות (fieldset) */
+#orderForm fieldset {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #d4b5a0;
+    background-color: #ffffff;
+}
+
+#orderForm legend {
+    font-weight: bold;
+    background-color: #F8CFD7;
+    color: #9D5068;
+    padding: 3px 8px;
+}
+
+#orderForm label {
+    display: block;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+
+#orderForm textarea {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
+/* עיצוב כפתור השליחה */
+#submitBtn {
+    background-color: #333333;
+    color: white;
+    padding: 8px 15px;
+    border: 1px solid #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#submitBtn[disabled] {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+
+/* עיצוב התמונה שמופיעה בתיבת ההצגה */
+#resultImage img {
+    max-width: 90%;
+    height: 10%;
+    margin: 0 auto;
+}
+
+/* מצב התחלתי: כל תמונות התוספות באזור המנה בשקיפות חלקית (אפור/דהוי) */
+.extras {
+    width: 70px;
+    height: auto;
+    opacity: 0.4; 
+    margin: 5px;
+}
+
+
+.extras.selected {
+    opacity: 1;
+}
+
+
+.iceCreamImages {
+    
+    display: none;
+}
+
+#summaryContent {
+    display: none;
+    background-color: #938e8e; /* רקע כהה */
+    color: #fff;            /* טקסט לבן */
+    padding: 30px;
+    margin-bottom: 20px;       /* רווח מהאלמנט שמעליו */
+    font-family: "Amatic SC", sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+}

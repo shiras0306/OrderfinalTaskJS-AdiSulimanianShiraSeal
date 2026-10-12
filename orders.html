@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title>Velveto | הזמנות</title>
+
+    <link rel="icon" href="images/logoVelveto.png" />
+
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+    <!-- Scripts -->
+    <script src="jScripts/JavaScript.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="container">
+
+    <header>
+        <div>
+            <img src="images/logoVelveto.png" alt="לוגו Velveto" title="לוגו Velveto" class="logo" />
+            <h1>Velveto</h1>
+        </div>
+
+        <nav aria-label="תפריט ראשי">
+            <ul>
+                <li><a href="index.html">דף הבית</a></li>
+                <li>
+                    <a href="bestSellers.html">הנמכרים ביותר</a>
+                    <ul>
+                        <li><a href="#" class="notActive">הטעמים החדשים שלנו</a></li>
+                        <li><a href="#" class="notActive">הטעמים הקלאסיים</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="branches.html">סניפים</a>
+                    <ul>
+                        <li><a href="#" class="notActive">סניפי צפון</a></li>
+                        <li><a href="centerBranches.html">סניפי מרכז</a></li>
+                        <li><a href="#" class="notActive">סניפי דרום</a></li>
+                    </ul>
+                </li>
+                <li><a href="orders.html">הזמנות</a></li>
+                <li><a href="contactUs.html">צור קשר</a></li>
+                <li>
+                    <a href="about.html">אודות</a>
+                    <ul>
+                        <li><a href="siteMap.html">מפת האתר</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav aria-label="פירורי לחם">
+        <ol class="breadcrumbs">
+            <li><a href="index.html">דף הבית</a></li>
+            <li>הזמנות</li>
+        </ol>
+    </nav>
+
+    <section id="contact-section">
+        <h2>הזמינו את הגלידה המושלמת שלכם</h2>
+        <p>מחכים כבר לראות את בחירתך!</p>
+
+        <form id="orderForm">
+            <div id="summaryContent"> </div>
+
+            <!-- טור ימני: כדורי גלידה ורטבים -->
+            <div class="formColumn rightColumn">
+                <fieldset>
+                    <legend>מספר כדורי גלידה<span class="required-star">*</span></legend>
+                    <label><input type="radio" name="scoopsIceCream" id="scoop1" value="1" onclick="showIceCreamImage()" required > 1</label><br>
+                    <label><input type="radio" name="scoopsIceCream" id="scoop2" value="2" onclick="showIceCreamImage()"> 2</label><br>
+                    <label><input type="radio" name="scoopsIceCream" id="scoop3" value="3" onclick="showIceCreamImage()"> 3</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>רטבים <span class="required-star">*</span></legend>  
+                    <label><input type="radio" name="sauce" id="sauceCaramel" onclick="showIceCreamImage()" required > קרמל מלוח</label><br>
+                    <label><input type="radio" name="sauce" id="sauceBerries" onclick="showIceCreamImage()"> פירות יער</label><br>
+                    <label><input type="radio" name="sauce" id="sauceStrawberry" onclick="showIceCreamImage()" >  תות</label><br>
+
+                </fieldset> 
+                
+                <fieldset>
+                <label for="clientName">שם מלא:<span class="required-star">*</span></label>
+                    
+                    <input type="text" id="clientName" onclick="checkForm()" oninput="checkForm()" onchange="checkForm()" required>
+
+                    <label for="clientNotes">הערות להזמנה:</label>
+                <textarea id="clientNotes" rows="2"></textarea><br><br>
+
+                    <!-- כפתור שליחה מקושר לפונקציית שלח הזמנה -->
+
+                    <input type="button" id="submitBtn" value="שלח הזמנה" onclick="sendOrder()" disabled>
+            </fieldset>
+            </div>
+
+            
+            <!-- טור אמצעי: תוספות -->
+            <div class="formColumn midColumn">
+                <fieldset>
+                    <legend>תוספות</legend>
+                    <label><input type="checkbox" name="extras" id="Pancakes" value="Pancakes" onclick="addExtras()">פנקייקים</label><br>
+                    <label><input type="checkbox" name="extras" id="Crepe" value="Crepe" onclick="addExtras()">קרפ</label><br>
+                    <label><input type="checkbox" name="extras" id="BelgianWaffle" value="BelgianWaffle" onclick="addExtras()">וופל בלגי</label><br>
+                    <label><input type="checkbox" name="extras" id="Donuts" value="Donuts" onclick="addExtras()">דונאטס</label><br>
+                </fieldset>
+            </div>
+
+      
+            <!-- תיבה לכל התמונות הקיימות ב-HTML -->
+            <fieldset id="imagePreviewBox">
+                <legend>הבחירה שלך</legend>
+                <div id="resultImage">
+
+                    <!-- כדורים ללא רוטב -->
+                    <img id="imgScoop1" src="images/orders/Scoop1.png" alt="כדור 1" class="iceCreamImages" >
+                    <img id="imgScoop2" src="images/orders/Scoop2.png" alt="2 כדורים" class="iceCreamImages" >
+                    <img id="imgScoop3" src="images/orders/Scoop3.png" alt="3 כדורים" class="iceCreamImages" >
+
+                    <!--  כדור 1 עם רטבים -->
+                    <img id="imgScoop1Strawberry" src="images/orders/iceCreamOneScoopWithStrawberry.jpg" alt="כדור 1 תות" class="iceCreamImages" >
+                    <img id="imgScoop1Berries" src="images/orders/iceCreamOneScoopWithBerries.png" alt="כדור 1 פירות יער" class="iceCreamImages" >
+                    <img id="imgScoop1Caramel" src="images/orders/iceCreamOneScoopWithCaramel.png" alt="כדור 1 קרמל מלוח" class="iceCreamImages" >
+
+                    <!--  2 כדורים עם רטבים -->
+                    <img id="imgScoop2Strawberry" src="images/orders/iceCreamTwoScoopsWithStrawberry.jpg" alt="2 כדורים תות" class="iceCreamImages" >
+                    <img id="imgScoop2Berries" src="images/orders/iceCreamTwoScoopsWithBerries.png" alt="2 כדורים פירות יער" class="iceCreamImages" >
+                    <img id="imgScoop2Caramel" src="images/orders/iceCreamTwoScoopsWithCaramel.png" alt="2 כדורים קרמל מלוח" class="iceCreamImages" >
+
+                    <!--  3 כדורים עם רטבים -->
+                    <img id="imgScoop3Strawberry" src="images/orders/iceCreamThreeScoopsWithStrawberry.jpg" alt="3 כדורים תות" class="iceCreamImages" >
+                    <img id="imgScoop3Berries" src="images/orders/iceCreamThreeScoopsWithBerries.png" alt="3 כדורים פירות" class="iceCreamImages">
+                    <img id="imgScoop3Caramel" src="images/orders/iceCreamThreeScoopsWithCaramel.png" alt="3 כדורים קרמל מלוח" class="iceCreamImages">
+                </div>
+
+                <!-- תמונות התוספות  -->
+                <div id="extras">
+
+                    <img id="PancakesImage" src="images/orders/Pancakes.jpg" alt="פנקייקים" class="extras">
+                    <img id="CrepeImage" src="images/orders/Crepe.jpg" alt="קרפ" class="extras">
+                    <img id="BelgianWaffleImage" src="images/orders/BelgianWaffle.jpg" alt="וופל בלגי" class="extras">
+                    <img id="DonutsImage" src="images/orders/Donuts.jpg" alt="דונאטס" class="extras">
+ 
+                </div>
+            </fieldset>
+
+            <!-- ניקוי ה-float -->
+            <div style="clear: both;"></div>
+
+        </form>
+    </section>
+    
+</div>
+</body>
+</html>
